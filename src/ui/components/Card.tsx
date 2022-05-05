@@ -16,10 +16,10 @@ function Card({ imagePath, productName, units, price }: CardProps) {
   return (
     <div className={styles.container}>
       <img src={imagePath} alt="Produto" />
-      <div>
+      <div className={styles.productInfo}>
         <div>
           <span>{productName}</span>
-          <span>{units} units</span>
+          <span className={styles.units}>{units} units</span>
         </div>
         <div>${convertToComma(price)}</div>
       </div>
