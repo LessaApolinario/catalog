@@ -7,4 +7,11 @@
 html, body, #root {
   height: 100%;
   width: 100%;
+
+  $text: #ffffff;
+  $secondary: #858689;
+  $bg: #191b21;
+
+  background-color: $bg;
+  color: $text;
 }
