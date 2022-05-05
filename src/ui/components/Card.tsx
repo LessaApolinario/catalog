@@ -9,8 +9,9 @@ interface CardProps {
 
 function Card({ imagePath, productName, units, price }: CardProps) {
   function convertToComma(price: number) {
+    console.log(price)
     const priceAsString = price.toString()
-    return priceAsString.replace(".", ",")
+    return priceAsString.replace(".", ",").padEnd(7, "0")
   }
 
   return (
