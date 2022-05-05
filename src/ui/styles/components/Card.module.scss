@@ -1,0 +1,34 @@
+.container {
+  $secondary: #858689;
+
+  width: clamp(5rem, 10rem, 20rem);
+  padding: 0.8rem;
+
+  border: 0.1rem solid $secondary;
+  border-radius: 8%;
+
+  > img {
+    width: 100%;
+    object-fit: cover;
+
+    background-color: #ffffff;
+
+    border-radius: 8%;
+  }
+
+  .productInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    span {
+      display: block;
+    }
+
+    span.units {
+      color: $secondary;
+    }
+
+    margin-top: 1rem;
+  }
+}
