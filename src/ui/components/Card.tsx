@@ -18,7 +18,13 @@ function Card({ imagePath, productName, units, price }: CardProps) {
       return integerPart + "." + decimalPart.padEnd(3, "0")
     }
 
-    return price
+    const lengths: Record<number, string> = {
+      1: priceAsString.concat(".").padEnd(5, "0"),
+      2: priceAsString.concat(".").padEnd(6, "0"),
+      3: priceAsString.concat(".").padEnd(7, "0")
+    }
+
+    return lengths[priceAsString.length]
   }
 
   function convertToComma(price: number) {
