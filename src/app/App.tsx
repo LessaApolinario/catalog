@@ -1,10 +1,11 @@
 import React from 'react';
 
 import { BiSearch } from 'react-icons/bi'
+import { FaTshirt } from 'react-icons/fa'
 
 import Card from '../ui/components/Card';
 
-import './styles.css';
+import styles from './styles.module.scss';
 
 import greenTshirt from "../assets/isolated-t-shirt-gb032c0a8a_640.png"
 import lightPinkTshirt from "../assets/isolated-t-shirt-gd2b6d9a92_640.png"
@@ -46,10 +47,12 @@ function App() {
     },
   ]
   return (
-    <div className="App">
-      <aside className="sidebar">
-        <h2>store</h2>
-        <span>600 products</span>
+    <div className={styles.container}>
+      <aside className={styles.sidebar}>
+        <div>
+          <h2>store</h2>
+          <span>600 products</span>
+        </div>
 
         <nav>
           <ul>
@@ -59,14 +62,17 @@ function App() {
             <li>Reports</li>
           </ul>
         </nav>
+
+        <FaTshirt />
       </aside>
 
       <main>
-        <div>
+        <div className={styles.topMenu}>
           <h1>Catalog</h1>
           <BiSearch />
         </div>
-        <div className="products">
+
+        <div className={styles.products}>
           {products.map(item =>
             <Card
               imagePath={item.imagePath}
