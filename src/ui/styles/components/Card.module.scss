@@ -1,11 +1,11 @@
 .container {
   $secondary: #858689;
 
-  width: clamp(5rem, 10rem, 20rem);
-  padding: 0.8rem;
+  width: clamp(5rem, 15rem, 20rem);
+  padding: 0.5rem;
 
-  border: 0.1rem solid $secondary;
-  border-radius: 8%;
+  border: 0.01rem solid $secondary;
+  border-radius: 0.79rem;
 
   > img {
     width: 100%;
@@ -13,7 +13,7 @@
 
     background-color: #ffffff;
 
-    border-radius: 8%;
+    border-radius: 0.79rem;
   }
 
   .productInfo {
